@@ -1,0 +1,9 @@
+{
+	"id": "jbm-mobile",
+	"name": "JBM Mobile Font",
+	"version": "1.0.0",
+	"minAppVersion": "1.7.2",
+	"description": "Embeds a subsetted JetBrains Mono (woff2, base64) and applies it on mobile only. Zero effect on desktop.",
+	"author": "zhengma",
+	"isDesktopOnly": false
+}
