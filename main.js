@@ -8,17 +8,17 @@ module.exports = class JbmMobilePlugin extends Plugin {
 			id: 'status',
 			name: 'Status (debug)',
 			callback: async () => {
-				let loaded = false
-				try {
-					const fonts = await document.fonts.load("16px 'JBM Mobile'")
-					loaded = fonts.length > 0
-				} catch (e) {}
+				const check = async (name) => {
+					try { return (await document.fonts.load(`16px '${name}'`)).length > 0 } catch (e) { return false }
+				}
+				const jbm = await check('JBM Mobile')
+				const smiley = await check('Smiley Sans Oblique')
 				const b = document.body
 				const ft = getComputedStyle(b).getPropertyValue('--font-text').trim()
 				new Notice(
-					`JBM v${this.manifest.version}\n` +
+					`Mobile Fonts v${this.manifest.version}\n` +
 					`is-mobile: ${b.classList.contains('is-mobile')}\n` +
-					`font loaded: ${loaded}\n` +
+					`JBM loaded: ${jbm} / Smiley loaded: ${smiley}\n` +
 					`--font-text: ${ft.slice(0, 70)}`,
 					15000
 				)

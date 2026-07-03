@@ -1,9 +1,9 @@
 {
 	"id": "jbm-mobile",
-	"name": "JBM Mobile Font",
-	"version": "1.0.2",
+	"name": "Mobile Fonts",
+	"version": "1.1.0",
 	"minAppVersion": "1.7.2",
-	"description": "Embeds a subsetted JetBrains Mono (woff2, base64) and applies it on mobile only. Zero effect on desktop.",
+	"description": "Mobile-only fonts, base64-embedded: subsetted JetBrains Mono for body/code + Smiley Sans (\u5f97\u610f\u9ed1) for headings. Zero effect on desktop.",
 	"author": "zhengma",
 	"isDesktopOnly": false
 }
